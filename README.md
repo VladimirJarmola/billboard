@@ -12,7 +12,7 @@ Internet resource for a fan server of a well-known MMORPG - something like a bul
 
 <h2>Requirements</h2>
  
-<p>Please refer to <a href="">requirements.txt</a> for an updated list of required packages.</p>
+<p>Please refer to <a href="https://github.com/VladimirJarmola/billboard/blob/master/requirements.txt">requirements.txt</a> for an updated list of required packages.</p>
 
 <h2>Running Locally</h2>
 
