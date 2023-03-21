@@ -1,0 +1,34 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<table>
+  <tr>
+    <td>Author bulliten</td>
+    <td>Category</td>
+    <td>Publication date</td>
+    <td>Header</td>
+    <td>Сontent</td>
+    <td>Action</td>
+    <td>Ad reviews</td>
+  </tr>
+  <tr>
+    <td>{{ sticker.author }}</td>
+    <td>{{ sticker.category }}</td>
+    <td>{{ sticker.datetime_of_creation|date:'d M Y' }}</td>
+    <td>{{ sticker.heading }}</td>
+    <td class="body-upload">{{ sticker.text_upload|safe }}</td>
+    <td>
+      <a href="{% url 'sticker_update' pk=sticker.id %}"> Change</a>
+      <a href="{% url 'sticker_delete' pk=sticker.id %}"> Delete</a>
+      <a href="{% url 'ans_create' pk=sticker.id %}"> Response</a>
+    </td>
+    <td> {% if is_not_ans %}
+      <a href="{% url 'stickers_ans' pk=sticker.id %}"> Have response</a>
+          {% else %}
+            No responses
+        {% endif %}
+    </td>
+  </tr>
+</table>
+
+{% endblock content %}

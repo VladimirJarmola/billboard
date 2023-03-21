@@ -1,0 +1,21 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<table>
+  <tr>
+    <td>Author response </td>
+    <td>Publication date </td>
+    <td>Text </td>
+  </tr>
+   <tr>
+       <td>{{ ans.author }}</td>
+       <td>{{ ans.datetime_of_creation|date:'d M Y' }}</td>
+       <td>{{ ans.text|safe }}</td>
+   </tr>
+
+</table>
+
+<hr>
+
+
+{% endblock content %}

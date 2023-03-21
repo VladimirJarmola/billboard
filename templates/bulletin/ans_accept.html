@@ -1,0 +1,25 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<table>
+  <tr>
+    <td>Author response </td>
+    <td>Publication date </td>
+    <td>Text </td>
+  </tr>
+   <tr>
+       <td>{{ ans_accept.author }}</td>
+       <td>{{ ans_accept.datetime_of_creation|date:'d M Y' }}</td>
+       <td>{{ ans_accept.text|safe }}</td>
+   </tr>
+
+</table>
+
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Do you want to accept the offer "{{ ans_accept.author }}"?</p>
+    <input type="submit" value="accept" />
+</form>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>
+Hello! Look at the list of new announcements on our fanserver for the last week, you might be interested!</h2>
+<ul>
+    {% for sticker in stickers %}
+        <li><a href="{{ link }}{{ sticker.get_absolute_url }}">{{ sticker.heading }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
